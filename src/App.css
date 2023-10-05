@@ -1,5 +1,20 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #03fc5a;
+}
+
+.App div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e0e0e0;
+  padding: 64px;
+  border-radius: 30px;
 }
 
 .App-logo {
@@ -35,4 +50,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #cecece;
+  border-radius: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  background-color: #282c34;
+  margin-left: 16px;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
 }
