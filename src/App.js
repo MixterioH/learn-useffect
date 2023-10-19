@@ -1,6 +1,6 @@
-import "./App.css"
-import { useEffect, useState } from "react"
-import userdefault from "./userdefault.jpg"
+import './App.css'
+import { useEffect, useState } from 'react'
+import userdefault from './userdefault.jpg'
 
 function App() {
   const [user, setUser] = useState()
@@ -19,7 +19,7 @@ function App() {
   }, [searchedUser])
 
   let userIMG
-  if (searchedUser === undefined || searchedUser == "") {
+  if (searchedUser === undefined || searchedUser === '') {
     userIMG = userdefault
   } else {
     userIMG = user.avatar_url
@@ -28,27 +28,27 @@ function App() {
   return (
     <>
       {user && (
-        <div className="App">
+        <div className='App'>
           <div>
             <form onSubmit={handleFormSubmit}>
               <input
-                type="text"
+                type='text'
                 value={searchUser}
                 onChange={(e) => setSearchUser(e.target.value)}
-                placeholder="User Name in Github"
+                placeholder='User Name in Github'
               />
-              <button type="submit">Pesquisar</button>
+              <button type='submit'>Pesquisar</button>
             </form>
 
             <h1>O usuário que você digitou é: </h1>
 
             <h2>{user.name}</h2>
 
-            <img src={userIMG} />
+            <img src={userIMG} alt='' />
             <p>Mora em: {user.location}</p>
             <p>Bio: {user.bio}</p>
 
-            <a href={user.html_url} target="_blank">
+            <a href={user.html_url} target='_blank' rel='noreferrer'>
               Link para o perfil
             </a>
           </div>
